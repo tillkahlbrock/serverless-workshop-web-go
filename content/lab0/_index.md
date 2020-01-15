@@ -32,7 +32,7 @@ Now we have to do the following steps to setup our development environment:
 
 ### Bootstrap
 - Open the terminal window and type:
-- ```git clone --single-branch --branch lab0 https://github.com/superluminar-io/serverless-workshop-go.git```
+- `git clone --single-branch --branch lab0 https://github.com/superluminar-io/serverless-workshop-go.git`
 - `cd serverless-workshop-go`
 - `./bootstrap.sh`
 
