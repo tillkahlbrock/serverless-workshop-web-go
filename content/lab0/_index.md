@@ -6,7 +6,7 @@ weight: 10
 **In this Lab we will**:
 
 - Setup the development environment
-- Create our deployment pipeline
+- Use [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-command-reference.html)
 - Deploy a simple `hello-world` function
 - Find logs and metrics for the function
 
@@ -22,12 +22,33 @@ weight: 10
 In order to setup the development environment in your AWS Account you have to log into the [AWS Console](https://console.aws.amazon.com/) via your
 web browser. Use the user and credentials you created earlier.
 
-Create the Cloudformation stack including the Cloud9 IDE and deployment pipeline using the following template:
-```
-https://serverless-workshop-eu-central-1-init.s3.eu-central-1.amazonaws.com/initial.template
-```
+Now we have to do the following steps to setup our development environment:
 
-Or simply click this button to launch the stack: [<img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png">](https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://serverless-workshop-eu-central-1-init.s3.eu-central-1.amazonaws.com/initial.template)
+### Create Cloud9 Environment
+- Open the [Cloud9 web interface](https://eu-central-1.console.aws.amazon.com/cloud9/home?region=eu-central-1#)
+- Create a new environment
+- Give it a name
+- Leave all other settings untouched
+
+### Bootstrap
+- Open the terminal window and type:
+
+    ```git clone --single-branch --branch lab0 https://github.com/superluminar-io/serverless-workshop-go.git```
+- `cd serverless-workshop-go`
+- `./bootstrap.sh`
+
+
+### Test
+- `sam --version`
+- `aws sts get-caller-identity`
+
+### Create a samconfig.toml
+- `sam deploy --guided`
+  - Stack name: ...
+  - Region: eu-central-1
+  - Confirm changes before deploy: Y
+  - Allow SAM CLI IAM role creation: Y
+  - Save arguments to samconfig.toml: Y
 
 ## Cloudformation Stacks
 
@@ -35,39 +56,6 @@ If you check out the [Cloudformation console](https://eu-central-1.console.aws.a
 
 Try to figure out:
 
-- Why are there two stacks, even if you just created one earlier?
-- Which resources did the different stacks create?
-- What output do they have?
-
-## Deployment Pipeline
-
-When the Cloudformation stacks got launched properly a [Code Pipeline](https://eu-central-1.console.aws.amazon.com/codesuite/codepipeline/home?region=eu-central-1) will be created.
-
-The pipeline will have failed to complete the first run. But that's intended ;)
-
-Try to figure out:
-
-- How does the pipeline get triggered?
-- What actions are performed during a pipeline run?
-- How does the deployment of the `hello-world` function work?
-
-## Hello World Function
-
-To get a first impression of the involved AWS Components and the Web IDE we will deploy a simple `hello-world` function. The function has already been copied to your Cloud9 workspace.
-
-Try to figure out:
-
-- Why did the first pipeline run fail? 
-- How to fix it?
-
-## Hints
-
-If you are stuck, here are some hints that might help you.
-
-{{% expand "Hint 1" %}}
-Take a look at the failed build step in Code Pipeline. There is `Details` link that leads to the console logs of the build.
-{{% /expand %}}
-
-{{% expand "Hint 2" %}}
-Set a unique prefix at the top of the `Makefile` (e.g. `PREFIX := my-name-and-something`). Commit and push the changes. This should fix the pipeline :)
-{{% /expand %}}
+- Why are there two stacks?
+- Which resources do the different stacks contain?
+- What outputs do they have?
