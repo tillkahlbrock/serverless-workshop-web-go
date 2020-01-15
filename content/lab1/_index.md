@@ -5,16 +5,16 @@ weight: 15
 
 **In this Lab we will**:
 
-- Create a first basic version of our url shortener
-- Learn how to store data in AWS DynamoDB using the AWS Python SDK (boto3)
-- See some more advanced features of AWS SAM
+- Create a first basic version of the url shortener
+- Learn how to store data in AWS DynamoDB using the [AWS Go SDK](https://aws.amazon.com/sdk-for-go/)
+- See some more advanced features of AWS SAM Templates
 
 **You completed this lab if you**:
 
 - Shortened at least one URL
 - Typed the shortened URL into your browser and got redirected properly
 
-## Implement a URL shortener using [DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) for storage with two functions.
+## Implement a URL shortener using [DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) for storage
 
 - Implement one function to create a shortened URL via HTTP POST
 - Implement one function to retrieve the full URL via HTTP GET issuing a `302 Found` redirect
@@ -51,12 +51,11 @@ sequenceDiagram
 
 ## Hints
 
-- Use boto3 to [use the DynamoDB API](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html)
 - Create a DynamoDB table using AWS SAM (e.g [AWS::Serverless::SimpleTable](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-template.html#serverless-sam-template-simpletable))
 - Give your Lambda functions permissions to access the DynamoDB table with [SAM Policy Templates](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-policy-templates.html)
 - Inject the DynamoDB table via [environment variables](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object) into your [Lambda function](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#properties)
 - Use path parameters with [API Gateway](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api) and Lambda
-- Generate a short unique ID for the URL ([e.g.](https://stackoverflow.com/a/2510733))
+- Generate a short unique ID for the URL with a [fancy algorithm](https://github.com/superluminar-io/serverless-workshop-go/blob/f2d821dbd300fb36b5aef8962d9b8e3ca5b5c781/functions/create_url/main.go#L21-L28)
 - Try it!
 
-You can find an example implementation here: https://github.com/superluminar-io/sac-workshop/compare/lab0..lab1?expand=1
+You can find an example implementation here: https://github.com/superluminar-io/serverless-workshop-go/compare/lab0..lab1?expand=1
