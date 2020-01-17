@@ -26,4 +26,4 @@ You have to:
 
 ## Hints
 
-You can find an example implementation here: https://github.com/superluminar-io/sac-workshop/compare/lab2..lab3?expand=1
+You can find an example implementation here: https://github.com/superluminar-io/serverless-workshop-go/compare/lab2..lab3?expand=1

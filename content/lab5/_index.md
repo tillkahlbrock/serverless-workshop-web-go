@@ -31,4 +31,4 @@ Steps to take in this lab:
 ## Hints
 
 - [Traffic shifting using CodeDeploy](https://github.com/awslabs/serverless-application-model/blob/master/docs/safe_lambda_deployments.rst#traffic-shifting-using-codedeploy)
-- You can find an example implementation here: https://github.com/superluminar-io/sac-workshop/compare/lab4..lab5?expand=1
+- You can find an example implementation here: https://github.com/superluminar-io/serverless-workshop-go/compare/lab4..lab5?expand=1

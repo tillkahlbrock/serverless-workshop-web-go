@@ -19,5 +19,5 @@ weight: 45
 
 ## Hints
 
-- You can find an example implementation here: [Step 1](https://github.com/superluminar-io/sac-workshop/compare/lab6_b..lab7_a?expand=1)
-- You can find an example implementation here: [Step 2](https://github.com/superluminar-io/sac-workshop/compare/lab7_a..lab7_b?expand=1)
+- You can find an example implementation here: [Step 1](https://github.com/superluminar-io/serverless-workshop-go/compare/lab6_b..lab7_a?expand=1)
+- You can find an example implementation here: [Step 2](https://github.com/superluminar-io/serverless-workshop-go/compare/lab7_a..lab7_b?expand=1)

@@ -36,5 +36,5 @@ feature.
 
 ## Hints
 
-- You can find an example implementation here: [Step 1](https://github.com/superluminar-io/sac-workshop/compare/lab5..lab6_a?expand=1)
-- You can find an example implementation here: [Step 2](https://github.com/superluminar-io/sac-workshop/compare/lab6_a..lab6_b?expand=1)
+- You can find an example implementation here: [Step 1](https://github.com/superluminar-io/serverless-workshop-go/compare/lab5..lab6_a?expand=1)
+- You can find an example implementation here: [Step 2](https://github.com/superluminar-io/serverless-workshop-go/compare/lab6_a..lab6_b?expand=1)
