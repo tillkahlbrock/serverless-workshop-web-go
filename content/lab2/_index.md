@@ -24,7 +24,10 @@ For convenience reasons we recommend that you add the following targets to your 
 1. Create a S3 bucket for hosting the web app
 
 ```makefile
-fe-bucket: guard-PREFIX
+AWS_REGION ?= eu-central-1
+FE_REPO_NAME := serverless-workshop-fe
+
+fe-bucket: guard-FE_BUCKET_NAME
 	@ if [ `aws s3 ls | grep -e ' $(FE_BUCKET_NAME)$$' | wc -l` -eq 1 ]; then \
 		echo "Bucket exists"; \
 	else \
@@ -37,10 +40,10 @@ fe-bucket: guard-PREFIX
 ```makefile
 fetch-frontend:
 	rm -rf frontend
-	wget https://github.com/superluminar-io/sac-workshop-fe/archive/master.zip -O master.zip
+	wget https://github.com/superluminar-io/$(FE_REPO_NAME)/archive/master.zip -O master.zip
 	unzip master.zip
 	rm -f master.zip
-	mv sac-workshop-fe-master frontend
+	mv $(FE_REPO_NAME)-master frontend
 ```
 
 3. Deploy the changes directly from the filesystem
@@ -57,6 +60,15 @@ deploy-frontend: fe-bucket
 	@ echo
 ``` 
 
+4. A additional guard helper target to check for existence of certain environment vars 
+```makefile
+guard-%:
+	@ if [ -z '${${*}}' ]; then \
+		echo "Environment variable $* not set"; \
+		exit 1; \
+	fi
+```
+
 **Attention**
 
 The file `frontend/src/_aws-exports.js` must be renamed to `frontend/src/aws-exports.js` and the API endpoint needs
@@ -64,7 +76,7 @@ to be configured (including the stage `https://SOME_ID.execute-api.eu-central-1.
 
 ## CORS
 
-In order to call the API from within your Browser (JavaScript), you need to enable CORS handling in the API Gateway.
+In order to call the API from within your Browser via JavaScript, you need to enable CORS handling in the API Gateway.
 To read more about what CORS is all about: you can find a good explanation at [Mozillas Developer Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
 To configure CORS settings with the API Gateway, you need to 
@@ -76,4 +88,4 @@ To configure CORS settings with the API Gateway, you need to
 
 ## Hints
 - Explicitly creating an `AWS::Serverless::Api` leads to a new API Gateway. This means the URL will change!
-- You can find an example implementation here: https://github.com/superluminar-io/sac-workshop/compare/lab1..lab2?expand=1
+- You can find an example implementation here: https://github.com/superluminar-io/serverless-workshop-go/compare/lab1..lab2?expand=1
