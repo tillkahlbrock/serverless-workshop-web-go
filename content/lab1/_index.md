@@ -14,6 +14,12 @@ weight: 15
 - Shortened at least one URL
 - Typed the shortened URL into your browser and got redirected properly
 
+## Overview
+
+At the end of this lab the url shortener will consist of the following components.
+
+![Diagram Lab 1](./Lab1.png)
+
 ## Implement a URL shortener using [DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) for storage
 
 - Implement one function to create a shortened URL via HTTP POST

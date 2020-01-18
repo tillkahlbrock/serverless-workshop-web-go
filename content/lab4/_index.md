@@ -15,6 +15,13 @@ weight: 30
 - Can sign-in this user via the frontend
 - Can still shorten URLs
 
+## Overview
+
+At the end of this lab the url shortener will consist of the following components.
+
+![Diagram Lab 4](./Lab4.png)
+
+
 ## Cognito User Pool
 
 Setting up a Cognito User Pool can be a bit tricky. In order to make it work, you need to:

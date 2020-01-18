@@ -14,6 +14,13 @@ weight: 20
 - Deployed the Frontend App manually via Make
 - Can shorten URLs through your browser
 
+## Overview
+
+At the end of this lab the url shortener will consist of the following components.
+
+![Diagram Lab 2](./Lab2.png)
+
+
 ## The Frontend App
 
 We prepared a small React App (via [react-create-app](https://github.com/facebook/create-react-app)) that you can find 

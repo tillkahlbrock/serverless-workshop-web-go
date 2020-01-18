@@ -12,6 +12,13 @@ weight: 25
 
 - Automatically store "preview information" for every new url
 
+## Overview
+
+At the end of this lab the url shortener will consist of the following components.
+
+![Diagram Lab 3](./Lab3.png)
+
+
 ## Preview functionality
 
 When pasting a URL into Twitter, Slack or similar we immediately see a preview. Let’s assume we want to save preview information for every URL we shorten. For each newly created short URL fetch a preview of the website and store it.
