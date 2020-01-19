@@ -28,11 +28,10 @@ of your function)
 
 ### Step 2 - Instrument your applications codes
 
-In order have more control over the traces X-Ray records, it is possible to create custom segments in your applications
-code (= instrumentation). An easy way to achieve this is by using the 
-[xray sdk for python](https://docs.aws.amazon.com/xray-sdk-for-python/latest/reference/basic.html#) and the 
-[Decorator for function auto-capture](https://docs.aws.amazon.com/xray-sdk-for-python/latest/reference/basic.html#decorator-for-function-auto-capture)
-feature.
+In order have more control over the traces X-Ray records, it is possible to add X-Ray tracing to your
+AWS clients with the [xray sdk for go](https://github.com/aws/aws-xray-sdk-go).
+The Clients will then trace the calls the other AWS service like DynamoDB for instance.
+
 
 ## Hints
 
