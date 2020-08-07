@@ -44,9 +44,10 @@ Now we have to do the following steps to setup our development environment:
 ### Create a samconfig.toml
 - `sam deploy --guided`
   - Stack name: ...
-  - Region: eu-central-1
+  - AWS Region: eu-central-1
   - Confirm changes before deploy: Y
   - Allow SAM CLI IAM role creation: Y
+  - HelloWorldFunction may not have authorization defined, Is this okay?: Y
   - Save arguments to samconfig.toml: Y
 
 ## Cloudformation Stacks
