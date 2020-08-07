@@ -30,12 +30,28 @@ Now we have to do the following steps to setup our development environment:
 - Give it a name
 - Leave all other settings untouched
 
+### Allocate more disk space
+
+By default, Cloud9 provisions 10 GiB of disk space for the IDE. In order to work with GO and install all dependencies, we need to allocate more disk space.
+
+1. Open the [EC2 console](http://console.aws.amazon.com/ec2)
+2. On the left side, click on **Volumes**:
+  ![AWS EC2 Console](./ec2-console.png)
+3. Select the volume attached to the Cloud9 environment:
+  ![AWS EC2 Volume Selection](./ec2-volume-selection.png)
+4. Click on **Actions** and then on **Modify Volume**:
+  ![AWS EC2 Volume Actions Dropdown](./ec2-volume-modify.png)
+4. Change the size from **10 GiB** to **20 GiB**. After that, click on **Modify**:
+  ![AWS EC2 Volume Modify Modal](./ec2-volume-size.png)
+5. Wait until the change is applied. You can refreseh the page to see the latest status:
+  ![AWS EC2 Volume State Processing](./ec2-volume-state-processing.png)
+
 ### Bootstrap
+- Go back to your Cloud9 environment
 - Open the terminal window and type:
 - `git clone --single-branch --branch lab0 https://github.com/superluminar-io/serverless-workshop-go.git`
 - `cd serverless-workshop-go`
 - `./bootstrap.sh`
-
 
 ### Test
 - `sam --version`
