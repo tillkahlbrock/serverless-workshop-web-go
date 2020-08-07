@@ -44,17 +44,17 @@ Now we have to do the following steps to setup our development environment:
 ### Create a samconfig.toml
 - `sam deploy --guided`
   - Stack name: ...
-  - Region: eu-central-1
+  - AWS Region: eu-central-1
   - Confirm changes before deploy: Y
   - Allow SAM CLI IAM role creation: Y
+  - HelloWorldFunction may not have authorization defined, Is this okay?: Y
   - Save arguments to samconfig.toml: Y
 
-## Cloudformation Stacks
+## CloudFormation
 
-If you check out the [Cloudformation console](https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1) you will notice 2 stacks.
+If you check out the [CloudFormation console](https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1) you will notice a new stack with the name you just defined in the guided deployment. CloudFormation is essentially a tool to provision, maintain and remove infrastructure in AWS. SAM uses CloudFormation under the hood to deploy the infrastrucutre we describe in this workshop.
 
 Try to figure out:
 
-- Why are there two stacks?
-- Which resources do the different stacks contain?
-- What outputs do they have?
+- Which resources did we just deploy?
+- What are outputs and why are they helpful?

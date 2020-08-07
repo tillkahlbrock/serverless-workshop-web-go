@@ -67,7 +67,7 @@ deploy-frontend: fe-bucket
 	@ echo
 ``` 
 
-4. A additional guard helper target to check for existence of certain environment vars 
+4. An additional guard helper target to check for the existence of certain environment vars
 ```makefile
 guard-%:
 	@ if [ -z '${${*}}' ]; then \
