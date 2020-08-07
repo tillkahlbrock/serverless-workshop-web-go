@@ -57,14 +57,31 @@ By default, Cloud9 provisions 10 GiB of disk space for the IDE. In order to work
 - `sam --version`
 - `aws sts get-caller-identity`
 
-### Create a samconfig.toml
-- `sam deploy --guided`
-  - Stack name: ...
-  - AWS Region: eu-central-1
-  - Confirm changes before deploy: Y
-  - Allow SAM CLI IAM role creation: Y
-  - HelloWorldFunction may not have authorization defined, Is this okay?: Y
-  - Save arguments to samconfig.toml: Y
+### SAM
+
+In this step, we are going to setup SAM and deploy the infrastructure for the first time. SAM will create a `samconfig.toml` file to persist your choices.
+
+```sh
+# Compile GO files
+$ make build
+
+# Configure SAM and deploy the infrastructure
+$ sam deploy --guided
+
+  Configuring SAM deploy
+  ======================
+
+  Looking for samconfig.toml :  Not found
+
+  Setting default arguments for 'sam deploy'
+  =========================================
+  Stack Name [sam-app]: UrlShortener 
+  AWS Region [us-east-1]: eu-central-1
+  Confirm changes before deploy [y/N]: Y
+  Allow SAM CLI IAM role creation [Y/n]: Y
+  HelloWorldFunction may not have authorization defined, Is this okay? [y/N]: Y
+  Save arguments to samconfig.toml [Y/n]: Y
+```
 
 ## CloudFormation
 
