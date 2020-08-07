@@ -10,7 +10,7 @@ We will focus on code organization, deployment strategies, Infrastructure as Cod
 
 You’ll learn how to:
 
-- write python code for the AWS Lambda platform and package dependencies
+- write GO code for the AWS Lambda platform and package dependencies
 - use the AWS Serverless Application Model (SAM)
 - enough bits of Cloudformation to get around on AWS
 - AWS building blocks like DynamoDB and S3
