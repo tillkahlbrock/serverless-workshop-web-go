@@ -43,4 +43,4 @@ In order to connect the frontend with Cognito and allow sign-in / sign-up, we ne
 ## Hints
 
 - You can find an example implementation here: https://github.com/superluminar-io/serverless-workshop-go/compare/lab3..lab4?expand=1
-- Changes to the Frontend App (revert): https://github.com/superluminar-io/sac-workshop-fe/commit/5bbb8c9fab7705b3954f86d34981078b8e52261c
+- Changes to the Frontend App (revert): https://github.com/superluminar-io/serverless-workshop-fe/commit/5bbb8c9fab7705b3954f86d34981078b8e52261c

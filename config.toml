@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "superluminar - Serverless Workshop"
 
 [params]
-editURL = "https://github.com/superluminar-io/sac-workshop-web/edit/master/content/"
+editURL = "https://github.com/superluminar-io/serverless-workshop-web-go/edit/master/content/"
 themeVariant = "blue"
 
 [outputs]
@@ -16,7 +16,7 @@ weight = 5
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-github'></i> Github repo"
-url = "https://github.com/superluminar-io/sac-workshop"
+url = "https://github.com/superluminar-io/serverless-workshop-go"
 weight = 10
 
 [[menu.shortcuts]]

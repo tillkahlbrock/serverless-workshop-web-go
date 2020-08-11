@@ -24,7 +24,7 @@ At the end of this lab the url shortener will consist of the following component
 ## The Frontend App
 
 We prepared a small React App (via [react-create-app](https://github.com/facebook/create-react-app)) that you can find 
-here on [github.com](https://github.com/superluminar-io/sac-workshop-fe).
+here on [github.com](https://github.com/superluminar-io/serverless-workshop-fe).
 
 For convenience reasons we recommend that you add the following targets to your `Makefile`
 
