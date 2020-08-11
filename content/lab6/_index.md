@@ -30,7 +30,19 @@ of your function)
 
 In order have more control over the traces X-Ray records, it is possible to add X-Ray tracing to your
 AWS clients with the [xray sdk for go](https://github.com/aws/aws-xray-sdk-go).
-The Clients will then trace the calls the other AWS service like DynamoDB for instance.
+The Clients will then trace the calls the other AWS service like DynamoDB or SNS.
+
+### Step 3 - Create some traces
+
+In order to create traces in X-Ray you have to call your functions. You can do this by either using the UI 
+or a HTTP client like cURL. If you do not use the Web UI we deployed in [Lab4](/lab4) be sure to either 
+set a valid `Authorization` header or disable [the authorization](https://github.com/superluminar-io/serverless-workshop-go/blob/071a75c4cc81924bc7bcacb07749c19e0f11fe0c/template.yaml#L36-L37) 
+for now.
+
+After invoking your functions, head to the X-Ray Service in the [AWS Console](https://eu-central-1.console.aws.amazon.com/xray/home?region=eu-central-1#/service-map).
+You can find different views on the tracing data you just created.
+Alternatively there is a section in Cloudwatch called [ServiceLense](https://eu-central-1.console.aws.amazon.com/cloudwatch/home?region=eu-central-1#servicelens:map).
+It gives you a different view on the same data paired with a tighter UI.
 
 
 ## Hints
