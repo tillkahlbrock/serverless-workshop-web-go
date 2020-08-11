@@ -30,5 +30,5 @@ Below you can find links on serveral Serverless topics.
 
 ## Technical Docs
 
-- [Python Lambda Handler](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html)
+- [Golang Lambda Handler](https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html)
 - [AWS SAM Specs](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md)
