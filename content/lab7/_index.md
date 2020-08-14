@@ -17,7 +17,7 @@ weight: 45
 **Why is this important?**
 
 When using serverless components from AWS you leave big part of the heavy lifting to Amazon. 
-This gives you the advantage not having to worry about monitoring your servers anymore.
+This gives you the advantage of not having to worry about monitoring your servers anymore.
 
 Despite that there are still things that could go wrong:
 
