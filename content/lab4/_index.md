@@ -15,6 +15,12 @@ weight: 30
 - Can sign-in this user via the frontend
 - Can still shorten URLs
 
+**Why is this important?**
+
+Nearly every API needs some sort of authentication for users or other services. With AWS Cognito this tasks becomes 
+easy. You can integrate with ApiGateway with nearly no effort and can take advantage of 
+AWS' [Amplify Client library](https://docs.amplify.aws/lib) to authenticate your web or mobile clients.
+
 ## Overview
 
 At the end of this lab the url shortener will consist of the following components.

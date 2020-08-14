@@ -14,6 +14,11 @@ weight: 15
 - Shortened at least one URL
 - Typed the shortened URL into your browser and got redirected properly
 
+**Why is this important?**
+
+In this lab we lay the basics for the rest of the workshop. All other labs evolve the functions and infrastructure components 
+you will be creating here. Here you will gain a basic understanding of how the different components work together.
+
 ## Overview
 
 At the end of this lab the url shortener will consist of the following components.

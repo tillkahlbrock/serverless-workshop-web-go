@@ -14,6 +14,11 @@ weight: 20
 - Deployed the Frontend App manually via Make
 - Can shorten URLs through your browser
 
+**Why is this important?**
+
+With this lab we are trying to make the workshop a bit more realistic. There will usually be a web part in your app
+the customer / user can interact with.
+
 ## Overview
 
 At the end of this lab the url shortener will consist of the following components.

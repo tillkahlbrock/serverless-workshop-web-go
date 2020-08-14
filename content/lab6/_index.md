@@ -15,6 +15,12 @@ weight: 40
 - Can tell how long your function needed to start (cold vs. warm)
 - Can tell how long your function needed to persist and fetch data from DynamoDB
 
+**Why is this important?**
+
+Implementing a Serverless architecture means connecting a lot of different services together. All this services can 
+fail in certain situations and introduce errors into your system. In order to gain the necessary insights into 
+the behaviour and performance of your application, you will learn how to facilitate AWS' tracing service X-RAY.
+
 ## Tracing with AWS X-Ray
 
 [AWS X-Ray](https://aws.amazon.com/xray/features/) allows us to do distributed tracing in a way that we can trace 
