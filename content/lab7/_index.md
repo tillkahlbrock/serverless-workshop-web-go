@@ -19,7 +19,7 @@ weight: 45
 When using serverless components from AWS you leave big part of the heavy lifting to Amazon. 
 This gives you the advantage of not having to worry about monitoring your servers anymore.
 
-Despite that there are still things that could go wrong:
+Despite that, there are still things that could go wrong:
 
 - You can deploy code that only errors under certain circumstances, not covered by your integration tests.
 - You can hit the memory limit of your function.
