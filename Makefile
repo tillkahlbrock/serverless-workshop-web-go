@@ -1,4 +1,4 @@
-HUGO_VERSION  := "0.58.3"
+HUGO_VERSION  := "0.58.4"
 HUGO_FLAVOUR  := "hugo_extended"
 HUGO_BINARY   := "./hugo"
 HUGO_ENV      ?= "dev"
