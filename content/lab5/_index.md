@@ -15,6 +15,13 @@ weight: 35
 - Have implemented [CodeDeploy blue/green deployment](https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html#welcome-deployment-overview-blue-green) for at least one function
 - Watched a deployment in the [Code Deploy Console](https://eu-central-1.console.aws.amazon.com/codesuite/codedeploy/deployments?region=eu-central-1)
 
+**Why is this important?**
+
+Even the best CI/CD systems and integration test suites can not catch all errors. Therefore, it is necessary to have
+a (automated!) way of testing your changes and rolling back to a sane version while you release them to your customers.
+
+AWS SAM offers a great way of releasing your changes gradually to your customers and reverting as soon as an error occurs. 
+
 ## Blue/Green Deployments with AWS SAM
 
 Blue/Green deployments is a [feature of AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html#welcome-deployment-overview-blue-green). 
