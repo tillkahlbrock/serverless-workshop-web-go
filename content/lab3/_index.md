@@ -17,7 +17,7 @@ weight: 25
 
 One features of AWS Lambda is, that it is event-driven at its core. Many AWS Services emit events that can be
 consumed by Lambda. It is an important skill to understand, how to design your architecture in a way that it
-can best take advantage of this asynchronous event-driven concepts.
+can best take advantage of this asynchronous event-driven concept.
 
 ## Overview
 
